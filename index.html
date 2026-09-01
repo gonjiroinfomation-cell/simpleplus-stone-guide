@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="天然石アクセサリーブランド Simple+ が扱う石の特徴を、あいうえお順で紹介します。">
+    <meta name="theme-color" content="#f7f6f2">
+    <title>天然石ガイド | Simple+</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#stone-list">石の一覧へ移動</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Simple+ 天然石ガイドの先頭へ">
+          <span class="brand-name">Simple+</span>
+          <span class="brand-label">STONE GUIDE</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="content-width">
+          <p class="eyebrow">Natural stone collection</p>
+          <h1 id="page-title">天然石ガイド</h1>
+          <p class="lead">
+            Simple+で出会える天然石を、名前から探せる小さな図鑑です。<br>
+            それぞれの色や表情を、アクセサリー選びの参考にご覧ください。
+          </p>
+        </div>
+      </section>
+
+      <nav class="kana-navigation" aria-label="石名のあいうえお順ナビゲーション">
+        <div class="kana-scroll content-width">
+          <a href="#group-a">あ</a>
+          <a href="#group-ka">か</a>
+          <a href="#group-sa">さ</a>
+          <a href="#group-ta">た</a>
+          <a href="#group-na">な</a>
+          <a href="#group-ha">は</a>
+          <a href="#group-ma">ま</a>
+          <a href="#group-ya">や</a>
+          <a href="#group-ra">ら</a>
+          <a href="#group-wa">わ</a>
+        </div>
+      </nav>
+
+      <div class="content-width list-heading">
+        <h2>石の一覧</h2>
+        <p><span id="stone-count">0</span>種類を掲載しています。</p>
+      </div>
+
+      <div id="stone-list" class="stone-groups content-width" aria-live="polite"></div>
+
+      <noscript>
+        <p class="noscript-message content-width">
+          石の一覧を表示するには、ブラウザのJavaScriptを有効にしてください。
+        </p>
+      </noscript>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-width footer-inner">
+        <p><span class="footer-brand">Simple+</span> 天然石ガイド</p>
+        <a href="#top">ページの先頭へ</a>
+      </div>
+    </footer>
+  </body>
+</html>

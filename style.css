@@ -1,0 +1,332 @@
+:root {
+  --background: #f7f6f2;
+  --surface: #ffffff;
+  --text: #292b29;
+  --muted: #686d68;
+  --accent: #64766b;
+  --accent-soft: #e9eee9;
+  --border: #dfe2dc;
+  --shadow: 0 8px 24px rgb(40 50 43 / 7%);
+  --content-width: 68rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.content-width,
+.header-inner {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--text);
+  color: #fff;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: rgb(255 255 255 / 94%);
+}
+
+.header-inner {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+}
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 88% 18%, rgb(216 226 219 / 70%), transparent 26%),
+    var(--surface);
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1.25rem;
+  font-family: Georgia, "Yu Mincho", "YuMincho", serif;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+}
+
+.lead {
+  max-width: 40rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.kana-navigation {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid var(--border);
+  background: rgb(247 246 242 / 95%);
+  backdrop-filter: blur(8px);
+}
+
+.kana-scroll {
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding-block: 0.7rem;
+  scrollbar-width: thin;
+}
+
+.kana-scroll a {
+  display: grid;
+  flex: 0 0 2.75rem;
+  min-height: 2.75rem;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.kana-scroll a:hover,
+.kana-scroll a:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  outline: none;
+}
+
+.list-heading {
+  padding: 3.5rem 0 1.5rem;
+}
+
+.list-heading h2 {
+  margin-bottom: 0.25rem;
+  font-family: Georgia, "Yu Mincho", "YuMincho", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.list-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.stone-groups {
+  padding-bottom: 4.5rem;
+}
+
+.stone-group {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 5.5rem;
+}
+
+.group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+  font-family: Georgia, "Yu Mincho", "YuMincho", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.group-count {
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.stone-grid {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.stone-card {
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.stone-card h3 {
+  margin-bottom: 0.5rem;
+  font-family: Georgia, "Yu Mincho", "YuMincho", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+.stone-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.empty-message {
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.noscript-message {
+  margin-bottom: 4rem;
+  padding: 1rem;
+  border: 1px solid #b88f53;
+  background: #fffaf0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.footer-inner p {
+  margin-bottom: 0;
+}
+
+.footer-inner a {
+  text-underline-offset: 0.2em;
+}
+
+.footer-brand {
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .content-width,
+  .header-inner {
+    width: min(100% - 3rem, var(--content-width));
+  }
+
+  .hero {
+    padding: 6rem 0 5rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .stone-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .stone-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .stone-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
