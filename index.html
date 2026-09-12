@@ -1,72 +1,470 @@
 <!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="天然石アクセサリーブランド Simple+ が扱う石の特徴を、あいうえお順で紹介します。">
-    <meta name="theme-color" content="#f7f6f2">
-    <title>天然石ガイド | Simple+</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#stone-list">石の一覧へ移動</a>
-
-    <header class="site-header" id="top">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Simple+ 天然石ガイドの先頭へ">
-          <span class="brand-name">Simple+</span>
-          <span class="brand-label">STONE GUIDE</span>
-        </a>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="content-width">
-          <p class="eyebrow">Natural stone collection</p>
-          <h1 id="page-title">天然石ガイド</h1>
-          <p class="lead">
-            Simple+で出会える天然石を、名前から探せる小さな図鑑です。<br>
-            それぞれの色や表情を、アクセサリー選びの参考にご覧ください。
-          </p>
-        </div>
-      </section>
-
-      <nav class="kana-navigation" aria-label="石名のあいうえお順ナビゲーション">
-        <div class="kana-scroll content-width">
-          <a href="#group-a">あ</a>
-          <a href="#group-ka">か</a>
-          <a href="#group-sa">さ</a>
-          <a href="#group-ta">た</a>
-          <a href="#group-na">な</a>
-          <a href="#group-ha">は</a>
-          <a href="#group-ma">ま</a>
-          <a href="#group-ya">や</a>
-          <a href="#group-ra">ら</a>
-          <a href="#group-wa">わ</a>
-        </div>
-      </nav>
-
-      <div class="content-width list-heading">
-        <h2>石の一覧</h2>
-        <p><span id="stone-count">0</span>種類を掲載しています。</p>
-      </div>
-
-      <div id="stone-list" class="stone-groups content-width" aria-live="polite"></div>
-
-      <noscript>
-        <p class="noscript-message content-width">
-          石の一覧を表示するには、ブラウザのJavaScriptを有効にしてください。
-        </p>
-      </noscript>
-    </main>
-
-    <footer class="site-footer">
-      <div class="content-width footer-inner">
-        <p><span class="footer-brand">Simple+</span> 天然石ガイド</p>
-        <a href="#top">ページの先頭へ</a>
-      </div>
-    </footer>
-  </body>
-</html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Simple+の天然石ガイド。石の色や表情、取り扱い、加工について、石名や五十音から探せます。">
+<meta name="theme-color" content="#7b465f"><title>天然石ガイド | Simple+</title>
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body><a class="skip-link" href="#stone-list">石の一覧へ移動</a>
+<header class="site-header" id="top"><div class="header-inner"><a class="brand" href="#top" aria-label="Simple+ 天然石ガイドの先頭へ"><span class="brand-name">Simple+</span><span class="brand-label">STONE GUIDE</span></a><a class="shop-link" href="https://simple0710.thebase.in/">ショップへ戻る <span aria-hidden="true">↗</span></a></div></header>
+<main>
+<section class="hero" aria-labelledby="page-title"><div class="content-width"><p class="eyebrow">Natural stone collection</p><h1 id="page-title">色と表情で出会う、<br>天然石の小さな図鑑。</h1><p class="lead">透明なきらめきも、やわらかな色も、一粒ごとに。<br>石の特徴と取り扱いを、アクセサリー選びの参考にご覧ください。</p><div class="quick-links"><a href="#stone-list">石を探す</a><a href="#care">お手入れ</a><a href="#treatments">色と加工について</a></div></div></section>
+<nav class="kana-navigation" aria-label="石名の五十音ナビゲーション"><div class="kana-scroll content-width"><a href="#group-a">あ</a><a href="#group-ka">か</a><a href="#group-sa">さ</a><a href="#group-ta">た</a><a href="#group-na">な</a><a href="#group-ha">は</a><a href="#group-ma">ま</a><a href="#group-ra">ら</a></div></nav>
+<section class="content-width search-section" id="stone-list" aria-labelledby="list-title"><div class="list-heading"><h2 id="list-title">石の一覧</h2><p>91種類の天然石・真珠・貝などを掲載しています。</p></div><div id="search-controls" hidden><label for="stone-search">石の名前で探す</label><div class="search-row"><input id="stone-search" type="search" placeholder="例：パール、ガーネット、すいしょう" autocomplete="off"><button type="button" id="clear-search">クリア</button></div><p id="search-status" role="status" aria-live="polite">91種類を表示</p></div><p class="guide-note">個々の作品の色・サイズ・加工情報は商品ページをご確認ください。作品例には販売を終了したものも含まれます。</p></section>
+<div class="content-width stone-groups"><section class="stone-group" id="group-a" aria-labelledby="group-a-title"><h2 class="group-title" id="group-a-title">あ<span class="group-count">12種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="アイオライト あいおらいと 菫青石 きんせいせき"><article class="stone-card" id="stone-アイオライト">
+    <h3>アイオライト</h3><p>すみれ色から青紫色を見せる石。見る方向によって色の濃さが変わり、落ち着いた透明感を楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>衝撃で割れやすい方向があるため、硬い場所にぶつけないようにしてください。高温や急な温度変化、超音波・蒸気洗浄を避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/iolite-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/iolite-description" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/94762807">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="アクアマリン あくあまりん"><article class="stone-card" id="stone-アクアマリン">
+    <h3>アクアマリン</h3><p>海を思わせる澄んだ水色が魅力のベリル。淡く透明感のある色合いが爽やかな印象です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="アコヤ真珠 あこやしんじゅ あこやしんじゅ あこやパール 真珠"><article class="stone-card" id="stone-アコヤ真珠">
+    <h3>アコヤ真珠</h3><p>きめ細かな照りと上品な光沢が魅力の真珠。白を基調にクリームやピンクを帯びるものもあります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>汗・化粧品・香水が付いたままにせず、使用後は柔らかい布でやさしく拭いてください。傷が付きやすいため、硬い石や金属と分けて保管し、高温や極端な乾燥を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>真珠には色を整える加工や染色などが行われることがあります。色名だけで無加工とは判断できません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/pearl-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="アバロンシェル あばろんしぇる"><article class="stone-card" id="stone-アバロンシェル">
+    <h3>アバロンシェル</h3><p>青や緑、紫が複雑にきらめく、ひとつずつ異なる模様が魅力の貝素材です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="アマゾナイト あまぞないと"><article class="stone-card" id="stone-アマゾナイト">
+    <h3>アマゾナイト</h3><p>爽やかな青緑色と白い筋模様が特徴の長石。明るくナチュラルな表情を楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>長石の仲間には割れやすい方向があります。落下や強い打ち付けを避け、ほかの石や金属と擦れないように保管してください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/moonstone-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118447239">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="アメジスト あめじすと"><article class="stone-card" id="stone-アメジスト">
+    <h3>アメジスト</h3><p>淡いライラックから深い紫まで色幅のある水晶。透明感と落ち着いた華やかさが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>急な温度変化と、長時間の強い日差しを避けてください。石同士が擦れないように保管し、柔らかい布でお手入れしてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/amethyst-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118274369">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="アンダリュサイト あんだりゅさいと"><article class="stone-card" id="stone-アンダリュサイト">
+    <h3>アンダリュサイト</h3><p>褐色を基調に、見る角度によって異なる色の表情が現れる石。小粒でも奥行きのある色合いが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/66213667">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="イエローサファイア いえろーさふぁいあ"><article class="stone-card" id="stone-イエローサファイア">
+    <h3>イエローサファイア</h3><p>明るい黄色が印象的なサファイア。透明感のある色合いが装いを華やかにします。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="インカローズ いんかろーず ロードクロサイト 菱マンガン鉱"><article class="stone-card" id="stone-インカローズ">
+    <h3>インカローズ</h3><p>濃淡のあるピンク色と縞模様が魅力。やわらかく温かな存在感を楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>比較的柔らかく、衝撃で割れやすい石です。硬い物と分けて保管し、力を入れて磨かないでください。日常のお手入れは柔らかい布でやさしく行ってください。</p></div><p class="reference">参考：<a href="https://www.handbookofmineralogy.org/pdfs/rhodochrosite.pdf" target="_blank" rel="noopener noreferrer">鉱物データ</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118797705">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="インペリアルトパーズ いんぺりあるとぱーず"><article class="stone-card" id="stone-インペリアルトパーズ">
+    <h3>インペリアルトパーズ</h3><p>黄金色からオレンジ、ピンクを帯びる暖かな色調が魅力のトパーズです。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬度は高くても、衝撃で割れやすい方向があります。落下や打ち付け、急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/topaz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="エメラルド えめらるど"><article class="stone-card" id="stone-エメラルド">
+    <h3>エメラルド</h3><p>鮮やかな緑色で知られるベリル。内包物も含め、一粒ごとの天然石らしい表情を楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>内包物や亀裂のある石が多いため、強い衝撃・高温・洗浄液を避けてください。超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>亀裂を目立ちにくくするため、オイルや樹脂などを使う含浸・充填が広く行われています。</p></div><p class="reference">参考：<a href="https://www.gia.edu/emerald-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/77472341">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="オパール おぱーる"><article class="stone-card" id="stone-オパール">
+    <h3>オパール</h3><p>角度によって虹色の光が浮かぶ遊色効果を見せるものがあり、幻想的な表情が魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>強い光による熱、急な温度変化、衝撃を避けてください。作品全体を液体に浸けず、日常は柔らかい布でやさしくお手入れしてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/opal-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118281069">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li></ul></section>
+<section class="stone-group" id="group-ka" aria-labelledby="group-ka-title"><h2 class="group-title" id="group-ka-title">か<span class="group-count">16種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="ガーデンクォーツ がーでんくぉーつ"><article class="stone-card" id="stone-ガーデンクォーツ">
+    <h3>ガーデンクォーツ</h3><p>内包物が庭園や風景のような模様を描く、個体差豊かなクォーツです。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ガーネット がーねっと"><article class="stone-card" id="stone-ガーネット">
+    <h3>ガーネット</h3><p>赤だけでなく、紫・ピンク・オレンジ・緑など多彩な色を持つ鉱物のグループ。種類ごとの色合いと輝きを楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い場所への打ち付けを避け、石同士が擦れないように保管してください。内包物や亀裂のある粒もあるため、蒸気や超音波でのお手入れは避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/garnet-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/garnet-description" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/66212276">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="カーネリアン かーねりあん"><article class="stone-card" id="stone-カーネリアン">
+    <h3>カーネリアン</h3><p>オレンジから赤褐色を見せるカルセドニー。半透明の温かな色合いが印象的です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="グァバクォーツ ぐぁばくぉーつ グアバクォーツ"><article class="stone-card" id="stone-グァバクォーツ">
+    <h3>グァバクォーツ</h3><p>グァバの果肉を思わせる、やや落ち着いた桃色がやさしい印象の石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div><div class="detail-block"><h4>知っておきたいこと</h4><p>ピンク系の石に使われる流通名です。名称だけで鉱物の同定や無処理を保証するものではありません。作品ごとの素材表記をご確認ください。</p></div></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118447047">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="クォーツ くぉーつ 水晶 すいしょう ロッククリスタル"><article class="stone-card" id="stone-クォーツ">
+    <h3>クォーツ</h3><p>透明感のある水晶をはじめ多彩な種類を持つ石英。光を取り込みやすく合わせやすい石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118442217">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="クォーツインデュモルチェライト くぉーついんでゅもるちぇらいと デュモルチェライトインクォーツ"><article class="stone-card" id="stone-クォーツインデュモルチェライト">
+    <h3>クォーツインデュモルチェライト</h3><p>透明なクォーツの中に青いデュモルチェライトが内包され、繊細な景色を描く石です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="グランディディエライト ぐらんでぃでぃえらいと"><article class="stone-card" id="stone-グランディディエライト">
+    <h3>グランディディエライト</h3><p>青緑から緑青色の澄んだ色合いを持つ、希少性の高い宝石です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="グリーンアメジスト ぐりーんあめじすと"><article class="stone-card" id="stone-グリーンアメジスト">
+    <h3>グリーンアメジスト</h3><p>淡く澄んだ緑色が魅力のクォーツ。すっきりと上品な印象を添えます。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="グリーンオニキス ぐりーんおにきす"><article class="stone-card" id="stone-グリーンオニキス">
+    <h3>グリーンオニキス</h3><p>透明感のある鮮やかな緑色が魅力。流通品には着色カルセドニーを含む場合があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>染色されているものは、アルコールや除光液、長時間の強い日差しで色が変わる場合があります。柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>カルセドニーやアゲートの仲間には、染色で色を整えたものが流通しています。実際の処理は商品ごとの素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="グリーンガーネット ぐりーんがーねっと ツァボライト"><article class="stone-card" id="stone-グリーンガーネット">
+    <h3>グリーンガーネット</h3><p>みずみずしい緑色をたたえたガーネット。小粒でも鮮やかな輝きを見せます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い場所への打ち付けを避け、石同士が擦れないように保管してください。内包物や亀裂のある粒もあるため、蒸気や超音波でのお手入れは避けてください。</p></div><div class="detail-block"><h4>知っておきたいこと</h4><p>緑色のガーネットの総称です。ツァボライトはその一種で、商品名に記載している場合があります。</p></div><p class="reference">参考：<a href="https://www.gia.edu/garnet-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/garnet-description" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118797324">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="グリーンカイヤナイト ぐりーんかいやないと"><article class="stone-card" id="stone-グリーンカイヤナイト">
+    <h3>グリーンカイヤナイト</h3><p>青みを帯びた緑色と結晶に沿う繊細な表情が魅力のカイヤナイトです。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="グリーントルマリン ぐりーんとるまりん"><article class="stone-card" id="stone-グリーントルマリン">
+    <h3>グリーントルマリン</h3><p>深みのある緑から明るい緑まで、豊かな色幅を楽しめるトルマリンです。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>強い衝撃や急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>色を整えるための加熱や照射が行われる場合があります。個々の作品の加工情報は商品ページをご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/tourmaline-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="黒蝶貝 くろちょうがい くろちょうがい こくちょうがい"><article class="stone-card" id="stone-黒蝶貝">
+    <h3>黒蝶貝</h3><p>黒や銀灰色を基調に、角度で虹色の輝きを見せる落ち着いた貝素材です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="クロムダイオプサイト くろむだいおぷさいと"><article class="stone-card" id="stone-クロムダイオプサイト">
+    <h3>クロムダイオプサイト</h3><p>クロムによる鮮やかな緑色が特徴。深い森林色から明るい緑まで発色の良さが魅力です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ケープアメジスト けーぷあめじすと"><article class="stone-card" id="stone-ケープアメジスト">
+    <h3>ケープアメジスト</h3><p>紫のアメジストと白いクォーツが描く、穏やかな縞模様が特徴です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="コーネルピン こーねるぴん"><article class="stone-card" id="stone-コーネルピン">
+    <h3>コーネルピン</h3><p>緑や褐色を中心に、見る角度で色味が変わる多色性を見せることがある希少石です。</p>
+    
+    
+  </article></li></ul></section>
+<section class="stone-group" id="group-sa" aria-labelledby="group-sa-title"><h2 class="group-title" id="group-sa-title">さ<span class="group-count">10種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="サードニクス さーどにくす"><article class="stone-card" id="stone-サードニクス">
+    <h3>サードニクス</h3><p>赤褐色やオレンジと白などの層が重なったカルセドニー。縞の入り方に一粒ごとの個性があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>染色されているものは、アルコールや除光液、長時間の強い日差しで色が変わる場合があります。柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>カルセドニーやアゲートの仲間には、染色で色を整えたものが流通しています。実際の処理は商品ごとの素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/birthstones/august-birthstones" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/66212276">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="桜メノウ さくらめのう さくらめのう チェリーブロッサムアゲート フラワーアゲート"><article class="stone-card" id="stone-桜メノウ">
+    <h3>桜メノウ</h3><p>淡い地色に花びらのような内包模様が見られるアゲート。チェリーブロッサムアゲートとも呼ばれ、模様の広がりを楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/66213667">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="サファイア さふぁいあ"><article class="stone-card" id="stone-サファイア">
+    <h3>サファイア</h3><p>深い青で知られるコランダムの一種。落ち着きと気品を感じさせる硬質な輝きが魅力です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="サンゴ さんご 珊瑚 赤珊瑚 コーラル"><article class="stone-card" id="stone-サンゴ">
+    <h3>サンゴ</h3><p>海から生まれた有機質の宝石。赤や桃色など、あたたかな色合いが特徴です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>汗や化粧品を付けたままにせず、柔らかい布で拭いてください。傷を防ぐため硬い物と分け、洗浄液や長時間の浸水を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>サンゴには染色や表面加工が行われたものもあります。色だけで無処理と判断せず、各作品の素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/77476165">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="シーブルーカルセドニー しーぶるーかるせどにー"><article class="stone-card" id="stone-シーブルーカルセドニー">
+    <h3>シーブルーカルセドニー</h3><p>海を思わせる爽やかな青色と、カルセドニー特有のやさしい光沢が魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>染色されているものは、アルコールや除光液、長時間の強い日差しで色が変わる場合があります。柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>カルセドニーやアゲートの仲間には、染色で色を整えたものが流通しています。実際の処理は商品ごとの素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/88679528">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="シトリン しとりん"><article class="stone-card" id="stone-シトリン">
+    <h3>シトリン</h3><p>蜂蜜や柑橘を思わせる黄色から黄金色が魅力のクォーツ。明るく温かな印象です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>急な温度変化と、長時間の強い日差しを避けてください。石同士が擦れないように保管し、柔らかい布でお手入れしてください。</p></div><div class="detail-block"><h4>加工について</h4><p>アメジストなどを加熱して黄色を引き出したものも流通しています。黄色であることだけで、天然のままの色とは判断できません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/citrine-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128140980">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="スコロライト すころらいと"><article class="stone-card" id="stone-スコロライト">
+    <h3>スコロライト</h3><p>淡いラベンダーやグレーがかった柔らかな色合いで流通するクォーツの呼称です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ストロベリークォーツ すとろべりーくぉーつ"><article class="stone-card" id="stone-ストロベリークォーツ">
+    <h3>ストロベリークォーツ</h3><p>赤や桃色の細かな内包物が、苺のようなきらめきを見せるクォーツです。</p>
+    <details class="stone-details"><summary>素材のこと</summary><div class="detail-block"><h4>知っておきたいこと</h4><p>流通上の呼び名は販売元によって使い方が異なる場合があります。名称だけで内包物の鉱物種や加工の有無は判断できません。</p></div></details>
+    
+  </article></li>
+<li class="stone-item" data-search="スモーキークォーツ すもーきーくぉーつ"><article class="stone-card" id="stone-スモーキークォーツ">
+    <h3>スモーキークォーツ</h3><p>煙を閉じ込めたようなブラウンからグレーの色合いを持つ、落ち着いた印象のクォーツです。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>クォーツには照射や加熱などで色を整えたものもあります。処理の有無は、色や呼び名だけでは判断できません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="セラフィナイト せらふぃないと"><article class="stone-card" id="stone-セラフィナイト">
+    <h3>セラフィナイト</h3><p>深い緑の地に銀白色の羽根を思わせる模様が広がる石です。</p>
+    
+    
+  </article></li></ul></section>
+<section class="stone-group" id="group-ta" aria-labelledby="group-ta-title"><h2 class="group-title" id="group-ta-title">た<span class="group-count">7種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="ターコイズ たーこいず トルコ石 スリーピングビューティーターコイズ"><article class="stone-card" id="stone-ターコイズ">
+    <h3>ターコイズ</h3><p>空や海を思わせる青から青緑色が魅力。母岩模様が入るものもあり個性豊かな石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>汗・皮脂・化粧品などによって色が変わることがあります。付着したままにせず、高温や洗浄液、超音波・蒸気洗浄を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>色や耐久性を整える加工が行われることがあります。産地名だけでは処理の有無は分かりません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/turquoise-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/68981252">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ダイヤモンド だいやもんど"><article class="stone-card" id="stone-ダイヤモンド">
+    <h3>ダイヤモンド</h3><p>非常に高い硬度と強い輝きを持つ宝石。無色だけでなく多彩なカラーダイヤもあります。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="タンザナイト たんざないと"><article class="stone-card" id="stone-タンザナイト">
+    <h3>タンザナイト</h3><p>青から紫を帯びた色合いが魅力のゾイサイト。光や見る方向で色の印象が変わります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>特定の方向に割れやすい性質があるため、落下や打ち付けに注意してください。急な温度変化、超音波・蒸気洗浄を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>青紫の色を引き出すため、加熱処理が一般的に行われています。</p></div><p class="reference">参考：<a href="https://www.gia.edu/tanzanite-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128135550">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="淡水パール たんすいぱーる たんすいパール 淡水真珠 真珠 パール"><article class="stone-card" id="stone-淡水パール">
+    <h3>淡水パール</h3><p>丸だけでなく楕円やバロックなど形の幅が広く、一粒ごとの個性を楽しめる真珠です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>汗・化粧品・香水が付いたままにせず、使用後は柔らかい布でやさしく拭いてください。傷が付きやすいため、硬い石や金属と分けて保管し、高温や極端な乾燥を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>真珠には色を整える加工や染色などが行われることがあります。色名だけで無加工とは判断できません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/pearl-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128154047">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="チャロアイト ちゃろあいと"><article class="stone-card" id="stone-チャロアイト">
+    <h3>チャロアイト</h3><p>紫を基調に白や黒が混ざる、流れるようなマーブル模様と独特の光沢が特徴です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ディープローズクォーツ でぃーぷろーずくぉーつ"><article class="stone-card" id="stone-ディープローズクォーツ">
+    <h3>ディープローズクォーツ</h3><p>通常のローズクォーツより濃い桃色を楽しめる、しっとりと上品な石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い物との擦れを避け、柔らかい布で拭いてください。超音波・蒸気洗浄は避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/rose-quartz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="トルマリン とるまりん"><article class="stone-card" id="stone-トルマリン">
+    <h3>トルマリン</h3><p>ピンク、グリーン、ブルー、ブラックなど非常に多彩な色を持つ石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>強い衝撃や急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>色を整えるための加熱や照射が行われる場合があります。個々の作品の加工情報は商品ページをご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/tourmaline-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128136352">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li></ul></section>
+<section class="stone-group" id="group-na" aria-labelledby="group-na-title"><h2 class="group-title" id="group-na-title">な<span class="group-count">2種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="ナチュラルカルセドニー なちゅらるかるせどにー"><article class="stone-card" id="stone-ナチュラルカルセドニー">
+    <h3>ナチュラルカルセドニー</h3><p>半透明のやわらかな色合いと、なめらかな光沢を持つ天然のカルセドニーです。</p>
+    <details class="stone-details"><summary>素材のこと</summary><div class="detail-block"><h4>知っておきたいこと</h4><p>「ナチュラル」という名称だけで、染色などの処理がないことを保証するものではありません。</p></div></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ネオンブルーアパタイト ねおんぶるーあぱたいと"><article class="stone-card" id="stone-ネオンブルーアパタイト">
+    <h3>ネオンブルーアパタイト</h3><p>鮮やかな青緑色と透明感が目を引く、発色の美しいアパタイトです。</p>
+    
+    
+  </article></li></ul></section>
+<section class="stone-group" id="group-ha" aria-labelledby="group-ha-title"><h2 class="group-title" id="group-ha-title">は<span class="group-count">24種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="ハーキマーダイヤモンド はーきまーだいやもんど"><article class="stone-card" id="stone-ハーキマーダイヤモンド">
+    <h3>ハーキマーダイヤモンド</h3><p>両端が尖った結晶形で知られる透明なクォーツ。名称にダイヤモンドとありますが水晶です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="パープルガーネット ぱーぷるがーねっと"><article class="stone-card" id="stone-パープルガーネット">
+    <h3>パープルガーネット</h3><p>赤紫から紫に寄った深い色合いを持ち、落ち着いた華やかさを楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い場所への打ち付けを避け、石同士が擦れないように保管してください。内包物や亀裂のある粒もあるため、蒸気や超音波でのお手入れは避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/garnet-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128137255">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="パイライト ぱいらいと"><article class="stone-card" id="stone-パイライト">
+    <h3>パイライト</h3><p>金属質の金色と強い光沢を持ち、結晶面が端正に輝く鉱物です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ビアクォーツ びあくぉーつ"><article class="stone-card" id="stone-ビアクォーツ">
+    <h3>ビアクォーツ</h3><p>ビールのような琥珀色を帯びたクォーツ。穏やかな透明感が魅力です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ピーターサイト ぴーたーさいと"><article class="stone-card" id="stone-ピーターサイト">
+    <h3>ピーターサイト</h3><p>青や金褐色が渦を巻くように交ざる、ダイナミックな模様が特徴です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ピーチムーンストーン ぴーちむーんすとーん"><article class="stone-card" id="stone-ピーチムーンストーン">
+    <h3>ピーチムーンストーン</h3><p>桃色から淡いオレンジ色を帯びたムーンストーン。やわらかな光と温かみが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>長石の仲間には割れやすい方向があります。落下や強い打ち付けを避け、ほかの石や金属と擦れないように保管してください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/moonstone-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクアメジスト ぴんくあめじすと"><article class="stone-card" id="stone-ピンクアメジスト">
+    <h3>ピンクアメジスト</h3><p>淡いピンクからライラック色を見せる、繊細でやさしい表情のクォーツです。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクエピドート ぴんくえぴどーと"><article class="stone-card" id="stone-ピンクエピドート">
+    <h3>ピンクエピドート</h3><p>クォーツの中に桃色から赤色の内包物が広がる、華やかな表情の石です。</p>
+    <details class="stone-details"><summary>素材のこと</summary><div class="detail-block"><h4>知っておきたいこと</h4><p>流通上の呼び名は販売元によって使い方が異なる場合があります。名称だけで内包物の鉱物種や加工の有無は判断できません。</p></div></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクオパール ぴんくおぱーる"><article class="stone-card" id="stone-ピンクオパール">
+    <h3>ピンクオパール</h3><p>やわらかなピンク色が特徴のオパール。ミルキーで穏やかな色合いを楽しめます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>強い光による熱、急な温度変化、衝撃を避けてください。作品全体を液体に浸けず、日常は柔らかい布でやさしくお手入れしてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/opal-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクカルセドニー ぴんくかるせどにー"><article class="stone-card" id="stone-ピンクカルセドニー">
+    <h3>ピンクカルセドニー</h3><p>やわらかなピンク色と、ふんわり光を含むような質感が特徴です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>染色されているものは、アルコールや除光液、長時間の強い日差しで色が変わる場合があります。柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>カルセドニーやアゲートの仲間には、染色で色を整えたものが流通しています。実際の処理は商品ごとの素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクサファイア ぴんくさふぁいあ"><article class="stone-card" id="stone-ピンクサファイア">
+    <h3>ピンクサファイア</h3><p>可憐な淡色から鮮やかな色まで、幅広いピンクを楽しめるサファイアです。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクスピネル ぴんくすぴねる"><article class="stone-card" id="stone-ピンクスピネル">
+    <h3>ピンクスピネル</h3><p>明るいピンクから深いローズ色まで幅広い表情を持ち、透明感と輝きが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い石でも傷や欠けを完全に防げるわけではありません。ほかのアクセサリーと分けて保管し、高温や強い衝撃を避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/spinel-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ピンクトルマリン ぴんくとるまりん"><article class="stone-card" id="stone-ピンクトルマリン">
+    <h3>ピンクトルマリン</h3><p>淡い桜色から濃い赤紫まで、多彩なピンクの表情を持つトルマリンです。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>強い衝撃や急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>色を整えるための加熱や照射が行われる場合があります。個々の作品の加工情報は商品ページをご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/tourmaline-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ブラックオニキス ぶらっくおにきす"><article class="stone-card" id="stone-ブラックオニキス">
+    <h3>ブラックオニキス</h3><p>深い黒が印象的なカルセドニー系の石。装いを選びにくく、他の石とも合わせやすい定番です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>染色されているものは、アルコールや除光液、長時間の強い日差しで色が変わる場合があります。柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>カルセドニーやアゲートの仲間には、染色で色を整えたものが流通しています。実際の処理は商品ごとの素材説明をご確認ください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ブラックサファイア ぶらっくさふぁいあ"><article class="stone-card" id="stone-ブラックサファイア">
+    <h3>ブラックサファイア</h3><p>黒に近い深い色合いと控えめな輝きが、装いを端正に引き締めます。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ブラックスピネル ぶらっくすぴねる"><article class="stone-card" id="stone-ブラックスピネル">
+    <h3>ブラックスピネル</h3><p>シャープな黒と強い輝きが特徴。カット面が光を反射し、小粒でも存在感があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い石でも傷や欠けを完全に防げるわけではありません。ほかのアクセサリーと分けて保管し、高温や強い衝撃を避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/spinel-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118422811">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ブルートパーズ ぶるーとぱーず"><article class="stone-card" id="stone-ブルートパーズ">
+    <h3>ブルートパーズ</h3><p>澄んだ青色が魅力のトパーズ。淡いスカイブルーから鮮やかなブルーまで幅があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬度は高くても、衝撃で割れやすい方向があります。落下や打ち付け、急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>流通するブルートパーズには、照射と加熱によって青色を引き出したものが広く使われています。</p></div><p class="reference">参考：<a href="https://www.gia.edu/topaz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118529815">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="プレナイト ぷれないと ぶどう石 葡萄石"><article class="stone-card" id="stone-プレナイト">
+    <h3>プレナイト</h3><p>淡い黄緑色と、みずみずしい半透明の質感が魅力の石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118797324">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="フローライト ふろーらいと 蛍石 ほたるいし"><article class="stone-card" id="stone-フローライト">
+    <h3>フローライト</h3><p>緑、紫、青、透明など多彩な色合いを持ち、一粒の中で複数色が混ざることもあります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>傷が付きやすく、衝撃で割れやすい石です。硬い物とぶつけたり、石同士を擦り合わせたりせず、柔らかい布で軽く拭いてください。</p></div><p class="reference">参考：<a href="https://www.handbookofmineralogy.org/pdfs/fluorite.pdf" target="_blank" rel="noopener noreferrer">鉱物データ</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118525902">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ヘソナイト へそないと"><article class="stone-card" id="stone-ヘソナイト">
+    <h3>ヘソナイト</h3><p>蜂蜜やシナモンを思わせる橙褐色と、とろりとした表情が魅力です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ヘリオドール へりおどーる"><article class="stone-card" id="stone-ヘリオドール">
+    <h3>ヘリオドール</h3><p>黄色から黄緑色を帯びたベリル。澄んだ黄金色の輝きが明るい印象を添えます。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ペリドット ぺりどっと"><article class="stone-card" id="stone-ペリドット">
+    <h3>ペリドット</h3><p>明るい黄緑色が特徴のオリビンの宝石名。透明感のある爽やかなグリーンが魅力です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ボツワナアゲート ぼつわなあげーと"><article class="stone-card" id="stone-ボツワナアゲート">
+    <h3>ボツワナアゲート</h3><p>グレーやブラウン、淡いピンクなどが繊細な縞模様を描く、落ち着いた表情のアゲートです。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ホワイトシェル ほわいとしぇる"><article class="stone-card" id="stone-ホワイトシェル">
+    <h3>ホワイトシェル</h3><p>白くなめらかな光沢と、角度によって現れるやさしい虹色が特徴です。</p>
+    
+    
+  </article></li></ul></section>
+<section class="stone-group" id="group-ma" aria-labelledby="group-ma-title"><h2 class="group-title" id="group-ma-title">ま<span class="group-count">8種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="マザーオブパール まざーおぶぱーる"><article class="stone-card" id="stone-マザーオブパール">
+    <h3>マザーオブパール</h3><p>貝殻の真珠層を使った素材。貝の種類により色合いが異なり、やわらかな光沢や虹色の表情を楽しめます。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="マラカイト まらかいと"><article class="stone-card" id="stone-マラカイト">
+    <h3>マラカイト</h3><p>濃淡のある鮮やかな緑色が縞や同心円を描く、表情豊かな石です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="マラヤガーネット まらやがーねっと"><article class="stone-card" id="stone-マラヤガーネット">
+    <h3>マラヤガーネット</h3><p>桃色、橙色、赤色などが溶け合う、ニュアンス豊かなガーネットです。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い場所への打ち付けを避け、石同士が擦れないように保管してください。内包物や亀裂のある粒もあるため、蒸気や超音波でのお手入れは避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/garnet-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128154047">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ミスティッククォーツ みすてぃっくくぉーつ"><article class="stone-card" id="stone-ミスティッククォーツ">
+    <h3>ミスティッククォーツ</h3><p>クォーツに施した表面加工が生む、幻想的で多彩なきらめきが特徴です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>表面を強く擦ったり、研磨剤入りの布で磨いたりしないでください。ほかの石や金属との接触、超音波・蒸気洗浄を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>表面へのコーティングによる色彩を楽しむ素材です。元の石全体が虹色をしているという意味ではなく、摩擦などで加工層が傷む場合があります。</p></div><p class="reference">参考：<a href="https://www.gia.edu/topaz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ミスティックトパーズ みすてぃっくとぱーず"><article class="stone-card" id="stone-ミスティックトパーズ">
+    <h3>ミスティックトパーズ</h3><p>表面加工によって虹色の輝きをまとい、見る角度で色彩が変化します。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>表面を強く擦ったり、研磨剤入りの布で磨いたりしないでください。ほかの石や金属との接触、超音波・蒸気洗浄を避けてください。</p></div><div class="detail-block"><h4>加工について</h4><p>表面へのコーティングによる色彩を楽しむ素材です。元の石全体が虹色をしているという意味ではなく、摩擦などで加工層が傷む場合があります。</p></div><p class="reference">参考：<a href="https://www.gia.edu/topaz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    
+  </article></li>
+<li class="stone-item" data-search="ムーアカイト むーあかいと"><article class="stone-card" id="stone-ムーアカイト">
+    <h3>ムーアカイト</h3><p>赤、黄、白、褐色など大地を思わせる多彩な色模様が特徴です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="モザンビークガーネット もざんびーくがーねっと"><article class="stone-card" id="stone-モザンビークガーネット">
+    <h3>モザンビークガーネット</h3><p>モザンビーク産として流通するガーネット。赤色の濃淡や透明感には一粒ごとの違いがあります。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="モルガナイト もるがないと"><article class="stone-card" id="stone-モルガナイト">
+    <h3>モルガナイト</h3><p>淡いピンクからピーチカラーを見せるベリル。透明感のあるやわらかな色合いが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>傷や強い衝撃、熱を避けてください。パールなど別の素材と組み合わせた作品は、より繊細な素材に合わせてお手入れしてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/morganite-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/128154047">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li></ul></section>
+<section class="stone-group" id="group-ra" aria-labelledby="group-ra-title"><h2 class="group-title" id="group-ra-title">ら<span class="group-count">12種類</span></h2><ul class="stone-grid"><li class="stone-item" data-search="ラピスラズリ らぴすらずり"><article class="stone-card" id="stone-ラピスラズリ">
+    <h3>ラピスラズリ</h3><p>深い青に白いカルサイトや金色のパイライトが混ざることがある、個性豊かな石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>アルコールや除光液、熱、強い摩擦を避けてください。色や艶を整える加工がある場合は、薬品などで変化することがあります。</p></div><div class="detail-block"><h4>加工について</h4><p>染色や、ワックス・オイルなどによって色や光沢を整えたものも流通しています。</p></div><p class="reference">参考：<a href="https://www.gia.edu/lapis-lazuli-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/94852864">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ラブラドライト らぶらどらいと"><article class="stone-card" id="stone-ラブラドライト">
+    <h3>ラブラドライト</h3><p>落ち着いた地色に、角度によって青や緑の光彩が浮かぶ長石。独特の輝きが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>長石の仲間には割れやすい方向があります。落下や強い打ち付けを避け、ほかの石や金属と擦れないように保管してください。</p></div><div class="detail-block"><h4>知っておきたいこと</h4><p>光彩は石の角度や光の方向によって現れます。正面では落ち着いた地色に見えることも、この石の特徴です。</p></div><p class="reference">参考：<a href="https://www.gia.edu/moonstone-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118795452">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ラリマー らりまー"><article class="stone-card" id="stone-ラリマー">
+    <h3>ラリマー</h3><p>青から水色の地に白い雲や波のような模様が現れる、爽やかでやわらかな表情の石です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ルチルクォーツ るちるくぉーつ"><article class="stone-card" id="stone-ルチルクォーツ">
+    <h3>ルチルクォーツ</h3><p>透明なクォーツの中に針状のルチルが走る、個性的な内包模様が特徴です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ルビー るびー"><article class="stone-card" id="stone-ルビー">
+    <h3>ルビー</h3><p>鮮やかな赤が魅力のコランダム。深みのある赤から明るい赤まで華やかな存在感があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>処理の種類によっては薬品や酸に弱くなります。洗浄液や超音波・蒸気洗浄を自己判断で使わず、柔らかい布でやさしく拭いてください。</p></div><div class="detail-block"><h4>加工について</h4><p>加熱や、亀裂に充填材を入れる処理などがあります。天然由来のルビーでも、無処理とは限りません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/ruby-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118797324">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="レインボームーンストーン れいんぼーむーんすとーん"><article class="stone-card" id="stone-レインボームーンストーン">
+    <h3>レインボームーンストーン</h3><p>白から半透明の地色に、角度によって青や虹色の光が浮かぶ幻想的な長石です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>長石の仲間には割れやすい方向があります。落下や強い打ち付けを避け、ほかの石や金属と擦れないように保管してください。</p></div><div class="detail-block"><h4>知っておきたいこと</h4><p>一般に白いラブラドライトに使われる流通名です。光彩は見る角度や光の向きで変わり、常に同じ強さで見えるわけではありません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/moonstone-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/moonstone-description" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/13183550">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="レモンクォーツ れもんくぉーつ"><article class="stone-card" id="stone-レモンクォーツ">
+    <h3>レモンクォーツ</h3><p>レモンのような爽やかな黄色と透明感が魅力のクォーツ。軽やかで明るい印象です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>ご使用後は柔らかい布でやさしく拭き、ほかの石や金具と擦れないように保管してください。細いワイヤーや石の穴の周辺に力をかけないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>クォーツには照射や加熱などで色を整えたものもあります。処理の有無は、色や呼び名だけでは判断できません。</p></div><p class="reference">参考：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118435323">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ローズアメジスト ろーずあめじすと"><article class="stone-card" id="stone-ローズアメジスト">
+    <h3>ローズアメジスト</h3><p>ローズ色を帯びた紫とやわらかな透明感が、落ち着いた華やぎを添えます。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ローズクォーツ ろーずくぉーつ"><article class="stone-card" id="stone-ローズクォーツ">
+    <h3>ローズクォーツ</h3><p>やわらかなピンク色が特徴のクォーツ。半透明からミルキーな表情まで幅があります。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い物との擦れを避け、柔らかい布で拭いてください。超音波・蒸気洗浄は避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/rose-quartz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/118795452">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ロードナイト ろーどないと"><article class="stone-card" id="stone-ロードナイト">
+    <h3>ロードナイト</h3><p>ローズピンクから赤みのある色を持ち、黒い模様が入ることもある落ち着いたピンクの石です。</p>
+    
+    
+  </article></li>
+<li class="stone-item" data-search="ロードライトガーネット ろーどらいとがーねっと"><article class="stone-card" id="stone-ロードライトガーネット">
+    <h3>ロードライトガーネット</h3><p>赤紫色の深く上品な色合いが特徴。光を受けると鮮やかな赤みを見せます。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬い場所への打ち付けを避け、石同士が擦れないように保管してください。内包物や亀裂のある粒もあるため、蒸気や超音波でのお手入れは避けてください。</p></div><p class="reference">参考：<a href="https://www.gia.edu/garnet-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説</a></p></details>
+    <a class="product-link" href="https://simple0710.thebase.in/items/68980086">この石を使った作品例を見る <span aria-hidden="true">→</span></a>
+  </article></li>
+<li class="stone-item" data-search="ロンドンブルートパーズ ろんどんぶるーとぱーず"><article class="stone-card" id="stone-ロンドンブルートパーズ">
+    <h3>ロンドンブルートパーズ</h3><p>深く落ち着いた青色で流通するブルートパーズ。グレーを感じるシックな色合いが魅力です。</p>
+    <details class="stone-details"><summary>取り扱い・素材のこと</summary><div class="detail-block"><h4>取り扱い</h4><p>硬度は高くても、衝撃で割れやすい方向があります。落下や打ち付け、急な温度変化を避け、超音波・蒸気洗浄は使用しないでください。</p></div><div class="detail-block"><h4>加工について</h4><p>流通するブルートパーズには、照射と加熱によって青色を引き出したものが広く使われています。</p></div><p class="reference">参考：<a href="https://www.gia.edu/topaz-care-cleaning" target="_blank" rel="noopener noreferrer">GIAの解説 1</a> / <a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIAの解説 2</a></p></details>
+    
+  </article></li></ul></section><p id="no-results" class="empty-message" hidden>見つかりませんでした。名前の一部や、別の呼び名でもお試しください。</p></div>
+<section class="content-width guide-section" id="care" aria-labelledby="care-title"><p class="eyebrow">Daily care</p><h2 id="care-title">毎日のお手入れ</h2><p>ご使用後は、研磨剤を含まない柔らかい布で汗や皮脂をやさしく拭き取ってください。石や金具が擦れ合わないよう、仕切りのあるケースや小袋で保管すると安心です。</p><p>入浴・水泳・運動・就寝時は外し、香水や化粧品、アルコール消毒液が直接かからないようにしてください。車内などの高温になる場所や、日差しの強い窓辺への置きっぱなしも避けてください。</p><p>複数の石やパール、金具を組み合わせた作品は、いちばん繊細な素材に合わせたお手入れを。Simple+の作品は細いワイヤーなども使うため、作品全体の浸け洗い、超音波・蒸気洗浄、研磨剤入りのクロスによるお手入れはおすすめしていません。</p><a class="text-link" href="https://simple0710.thebase.in/p/00003">金具の素材と取り扱いを見る →</a></section>
+<section class="content-width guide-section" id="treatments" aria-labelledby="treatments-title"><p class="eyebrow">Color &amp; material</p><h2 id="treatments-title">天然石の色と加工について</h2><p>天然の石にも、色や透明感、耐久性を整える加工が施されることがあります。「天然石」と「無処理」は同じ意味ではありません。このガイドの加工説明は一般的な情報で、掲載作品すべてにその処理が施されていることを示すものではありません。</p><div class="treatment-grid"><div><h3>加熱・照射</h3><p>熱や照射によって色を引き出したり、整えたりする加工です。</p></div><div><h3>染色</h3><p>色素を加えて発色を整える加工です。薬品や長時間の強い光で色が変わる場合があります。</p></div><div><h3>コーティング</h3><p>石の表面に薄い層を重ねて色や光沢を加える加工です。ミスティック系の石などは、強い摩擦を避けてください。</p></div><div><h3>含浸・充填</h3><p>オイルや樹脂などを浸み込ませたり、亀裂に入れたりする加工です。素材によって熱や洗浄液への注意が必要です。</p></div></div><p class="reference">加工の一般的な説明：<a href="https://www.gia.edu/gem-treatment" target="_blank" rel="noopener noreferrer">GIA「宝石の処理について」</a></p><p>石の呼び名には鉱物名のほかに流通名もあります。色の濃淡・内包物・模様には個体差があり、画面や照明によっても見え方が変わります。気になる点は、商品名を添えてご注文前にお問い合わせください。</p><div class="quick-links"><a href="https://thebase.com/inquiry/simple0710">お問い合わせ</a><a href="https://simple0710.thebase.in/">Simple+の作品を見る →</a></div></section>
+</main><footer class="site-footer"><div class="content-width footer-inner"><p><span class="footer-brand">Simple+</span> 天然石ガイド</p><a href="https://simple0710.thebase.in/">ショップへ戻る</a><a href="#top">ページの先頭へ</a></div></footer></body></html>
