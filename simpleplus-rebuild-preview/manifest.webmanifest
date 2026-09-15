@@ -1,0 +1,13 @@
+{
+  "name":"Simple+ Rebuild v0.1.1 Mobile Preview",
+  "short_name":"Simple+",
+  "description":"必要な素材から始める、制作・在庫・売上の管理。日本時間で記録します。",
+  "id":"./", "start_url":"./", "scope":"./", "display":"standalone",
+  "background_color":"#f4f5f0", "theme_color":"#28594c", "lang":"ja",
+  "prefer_related_applications":false,
+  "icons":[
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
